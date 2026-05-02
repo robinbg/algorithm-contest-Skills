@@ -48,7 +48,7 @@ npx skills add robinbg/algorithm-contest-Skills -a codex
 
 ### Option 2: ask your agent to install it
 
-如果你的 agent 不支持 `npx`，直接把仓库地址和下面这段提示词发给它：
+如果你的 agent 不支持 `npx`，直接把下面这段提示词发给它：
 
 ```text
 Install the AgentSkills-compatible skills from this GitHub repository:
