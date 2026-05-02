@@ -32,9 +32,6 @@ npx skills add robinbg/algorithm-contest-Skills/algorithm-contest-tester
 常用选项：
 
 ```bash
-# 查看仓库里有哪些 skills
-npx skills add robinbg/algorithm-contest-Skills --list
-
 # 只安装出题人
 npx skills add robinbg/algorithm-contest-Skills --skill algorithm-contest-problemsetter
 
@@ -49,9 +46,24 @@ npx skills add robinbg/algorithm-contest-Skills -a claude-code
 npx skills add robinbg/algorithm-contest-Skills -a codex
 ```
 
-### Manual install paths
+### Option 2: ask your agent to install it
 
-这些 skills 采用通用的 `SKILL.md` 结构：YAML frontmatter + Markdown 指令。可在以下工具中使用：
+如果你的 agent 不支持 `npx`，直接把仓库地址和下面这段提示词发给它：
+
+```text
+Install the AgentSkills-compatible skills from this GitHub repository:
+https://github.com/robinbg/algorithm-contest-Skills
+
+Install these two skills:
+- algorithm-contest-problemsetter
+- algorithm-contest-tester
+
+Each skill is a folder containing SKILL.md. Put them in the skill directory used by this agent. If the agent has no native skill system, load the relevant SKILL.md as project rules or custom instructions.
+```
+
+### Troubleshooting reference: manual install paths
+
+如果 Option 1/2 都不适合，再参考下面的常见目录。每个 skill 都是一个包含 `SKILL.md` 的目录。
 
 | Tool | Manual location / usage |
 |---|---|
