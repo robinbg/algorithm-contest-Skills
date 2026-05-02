@@ -1,20 +1,20 @@
 # Algorithm Contest Skills
 
-两个面向算法竞赛工作流的 Codex Skills：
+两个面向算法竞赛工作流的 AgentSkills-compatible skills：
 
-- `algorithm-contest-problemsetter`：算法竞赛出题人。用于 CSP、NOI、ICPC/CCPC、校赛、训练赛、LeetCode 竞赛等场景的造题、改题、题面打磨、数据范围设计、部分分设计、题解和标程规划。
+- `algorithm-contest-problemsetter`：算法竞赛出题人。用于 CSP、NOI、ICPC/CCPC、校赛、训练赛、LeetCode 竞赛等场景的造题、改题、题面打磨、测试用例生成、数据生成器设计、数据范围设计、部分分设计、题解和标程规划。
 - `algorithm-contest-tester`：算法竞赛验题人。用于验题、找漏洞、构造反例、对拍、审查标程、题解、数据、checker、validator 和 special judge。
 
 核心分工：
 
 | Skill | 关注点 | 产物 |
 |---|---|---|
-| `algorithm-contest-problemsetter` | 创造算法观察和区分度 | 题面、题解、标程规划、数据设计、部分分 |
+| `algorithm-contest-problemsetter` | 创造算法观察和区分度 | 题面、题解、标程规划、测试用例、数据生成器、部分分 |
 | `algorithm-contest-tester` | 攻击漏洞和不一致 | 反例、hack、对拍方案、风险报告、checker/validator 审查 |
 
 ## Installation
 
-### Recommended: use `npx skills`
+### Option 1: use `npx skills`
 
 安装整个仓库中的两个 skills：
 
@@ -44,7 +44,7 @@ npx skills add robinbg/algorithm-contest-Skills --skill algorithm-contest-tester
 # 安装到全局，而不是当前项目
 npx skills add robinbg/algorithm-contest-Skills -g
 
-# 指定目标 agent，例如 Claude Code 或 Codex
+# 指定目标 agent
 npx skills add robinbg/algorithm-contest-Skills -a claude-code
 npx skills add robinbg/algorithm-contest-Skills -a codex
 ```
@@ -55,11 +55,11 @@ npx skills add robinbg/algorithm-contest-Skills -a codex
 
 | Tool | Manual location / usage |
 |---|---|
-| OpenAI Codex / Codex CLI | 推荐用 `npx skills add`。手动安装时放到 `$CODEX_HOME/skills/<skill-name>/SKILL.md`，通常是 `~/.codex/skills/<skill-name>/SKILL.md`。 |
 | Claude Code | 个人 skills 放到 `~/.claude/skills/<skill-name>/SKILL.md`；项目 skills 放到 `.claude/skills/<skill-name>/SKILL.md`。 |
 | Claude Desktop / Claude.ai Skills | 上传单个 `SKILL.md`，或上传包含 `SKILL.md` 的 skill 目录 ZIP。 |
 | OpenClaw | 放到 `~/.openclaw/skills/<skill-name>/SKILL.md`、`~/.agents/skills/<skill-name>/SKILL.md`、`<workspace>/.agents/skills/<skill-name>/SKILL.md` 或 `<workspace>/skills/<skill-name>/SKILL.md`。 |
 | Hermes Agent | 放到 `~/.hermes/skills/<skill-name>/SKILL.md`；也可放到项目 `skills/<skill-name>/SKILL.md`，取决于 Hermes 配置。 |
+| OpenAI Codex / Codex CLI | 可用。推荐用 `npx skills add`；手动安装时放到 `$CODEX_HOME/skills/<skill-name>/SKILL.md`，通常是 `~/.codex/skills/<skill-name>/SKILL.md`。 |
 | Cursor / Windsurf | 可通过 `npx skills add` 尝试安装；若当前版本未自动识别，把 `SKILL.md` 内容作为 rules、context 或 agent instructions 引入。 |
 | Cline / Roo Code / Continue | 把对应 `SKILL.md` 内容作为自定义指令或项目规则引用；不保证自动触发。 |
 | Gemini CLI / Aider / other coding agents | 直接引用对应 `SKILL.md`，让 agent 按其中工作流执行。 |
