@@ -17,14 +17,14 @@
 安装整个仓库中的两个 skills：
 
 ```bash
-npx skills add robinbg/algorithm-contest-skills
+npx skills add robinbg/algorithm-contest-Skills
 ```
 
 也可以按目录安装单个 skill：
 
 ```bash
-npx skills add robinbg/algorithm-contest-skills/algorithm-contest-problemsetter
-npx skills add robinbg/algorithm-contest-skills/algorithm-contest-tester
+npx skills add robinbg/algorithm-contest-Skills/algorithm-contest-problemsetter
+npx skills add robinbg/algorithm-contest-Skills/algorithm-contest-tester
 ```
 
 ## Usage
