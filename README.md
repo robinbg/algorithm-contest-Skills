@@ -34,6 +34,8 @@ npx skills add robinbg/algorithm-contest-Skills/algorithm-contest-tester
 | Tool | Usage |
 |---|---|
 | OpenAI Codex / Codex CLI | 推荐。可通过 `npx skills add robinbg/algorithm-contest-Skills` 安装，触发词由 `SKILL.md` 的 `description` 控制。 |
+| OpenClaw | 可直接使用。OpenClaw 支持 AgentSkills-compatible skill folders，可放在 `~/.openclaw/skills`、`~/.agents/skills`、`<workspace>/.agents/skills` 或 `<workspace>/skills`。 |
+| Hermes Agent | 可直接使用。Hermes skills 是包含 `SKILL.md` 的目录，可放在 `~/.hermes/skills/<skill-name>/SKILL.md`。 |
 | Claude Code | 可用。将对应 skill 目录放入 Claude Code 的 skills 目录，或在项目中引用 `SKILL.md`。 |
 | Claude Desktop / Claude.ai Skills | 可用。按 Anthropic Skills 的方式导入包含 `SKILL.md` 的目录。 |
 | Cursor / Windsurf | 可手动使用。把对应 `SKILL.md` 作为 rules、context 或 agent instructions 引入；不保证自动触发。 |
