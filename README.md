@@ -94,7 +94,7 @@ npx skills add robinbg/algorithm-contest-Skills -a codex
 常用提示词：
 
 ```text
-用算法竞赛出题人设计一道 CSP 提高难度的图论题，要求有部分分、题解思路和数据生成建议。
+用算法竞赛出题人设计一道 CSP 提高难度的图论题，要求有部分分、题解思路、测试用例分层表和数据生成器策略。
 ```
 
 ```text
