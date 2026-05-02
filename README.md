@@ -27,6 +27,21 @@ npx skills add robinbg/algorithm-contest-Skills/algorithm-contest-problemsetter
 npx skills add robinbg/algorithm-contest-Skills/algorithm-contest-tester
 ```
 
+## Compatible Tools
+
+这些 skills 采用通用的 `SKILL.md` 结构：YAML frontmatter + Markdown 指令。可在以下工具中使用：
+
+| Tool | Usage |
+|---|---|
+| OpenAI Codex / Codex CLI | 推荐。可通过 `npx skills add robinbg/algorithm-contest-Skills` 安装，触发词由 `SKILL.md` 的 `description` 控制。 |
+| Claude Code | 可用。将对应 skill 目录放入 Claude Code 的 skills 目录，或在项目中引用 `SKILL.md`。 |
+| Claude Desktop / Claude.ai Skills | 可用。按 Anthropic Skills 的方式导入包含 `SKILL.md` 的目录。 |
+| Cursor / Windsurf | 可手动使用。把对应 `SKILL.md` 作为 rules、context 或 agent instructions 引入；不保证自动触发。 |
+| Cline / Roo Code / Continue | 可手动使用。把 `SKILL.md` 内容作为自定义指令或项目规则引用；不保证自动触发。 |
+| Gemini CLI / Aider / other coding agents | 可手动使用。直接引用对应 `SKILL.md`，让 agent 按其中工作流执行。 |
+
+如果工具支持“读取目录中的 `SKILL.md` 并按 `description` 自动触发”，可以直接作为 skill 使用；否则把 `SKILL.md` 当作专用 system prompt / project rule 使用。
+
 ## Usage
 
 示例：
